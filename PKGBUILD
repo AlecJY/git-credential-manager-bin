@@ -1,6 +1,6 @@
 _realname='git-credential-manager'
 pkgname="${_realname}-bin"
-pkgver=1.17.1
+pkgver=1.17.2
 pkgrel=1
 pkgdesc="Secure Git credential storage for Windows with support for Visual Studio Team Services, GitHub, and Bitbucket multi-factor authentication"
 arch=('any')
@@ -9,7 +9,7 @@ license=('MIT')
 source=("https://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases/download/v${pkgver}/gcmw-v${pkgver}.zip")
 depends=('git')
 install="${pkgname}.install"
-sha256sums=('3e4cee79c56f673e4b6c19d6173fa35006816846592e38c03635e1f32ed7691d')
+sha256sums=('0cc56ca28de8f9b4f35cf92a240b3709f9640de18094dd34fc9d2be196b4b30f')
 
 build() {
     cd "${srcdir}"
