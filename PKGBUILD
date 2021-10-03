@@ -1,27 +1,28 @@
-_realname='git-credential-manager'
+_realname='git-credential-manager-core'
 pkgname="${_realname}-bin"
-pkgver=1.20.0
+pkgver=2.0.498
+_buildver=54650
 pkgrel=1
-pkgdesc="Secure Git credential storage for Windows with support for Visual Studio Team Services, GitHub, and Bitbucket multi-factor authentication"
+pkgdesc="Secure, cross-platform Git credential storage with authentication to GitHub, Azure Repos, and other popular Git hosting services."
 arch=('any')
-url='https://github.com/Microsoft/Git-Credential-Manager-for-Windows'
+url='https://github.com/microsoft/Git-Credential-Manager-Core'
 license=('MIT')
-source=("https://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases/download/${pkgver}/gcmw-v${pkgver}.zip")
+source=("https://github.com/microsoft/Git-Credential-Manager-Core/releases/download/v${pkgver}/gcmcore-win-x86-${pkgver}.${_buildver}.zip")
 depends=('git')
+conflicts=('git-credential-manager-bin')
 install="${pkgname}.install"
-sha256sums=('523847459aef94bf45e15c08ab67c1c23b6dcb563b2cbda956c04dc491f82cdb')
+sha256sums=('4bb0ef73f0ed9892ae5ac2200389a8a3ee3200e47f0fcf598406caff1c4a6885')
 
 build() {
     cd "${srcdir}"
-	rm gcmw-v${pkgver}.zip
-    rm install.cmd
-    rm README.md
+	rm gcmcore-win-x86-${pkgver}.${_buildver}.zip
+    rm validatesign.timestamp
 }
 
 package() {
     cd "${srcdir}"
-    install -Dm644 LICENSE.TXT "${pkgdir}/usr/share/licenses/${_realname}/LICENSE"
-	rm LICENSE.TXT
+    install -Dm644 NOTICE "${pkgdir}/usr/share/licenses/${_realname}/LICENSE"
+	rm NOTICE
 	mkdir -p ${pkgdir}/usr/lib/git-core
 	cp * "${pkgdir}/usr/lib/git-core"
 }
