@@ -1,4 +1,4 @@
 pkg/
 src/
-gcmw-v*.zip
-git-credential-manager-bin-*-any.pkg.tar.xz
+gcmcore-win-x86-*.zip
+git-credential-manager-core-bin-*-any.pkg.tar.zst
