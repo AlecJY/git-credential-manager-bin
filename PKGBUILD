@@ -15,14 +15,14 @@ sha256sums=('2803bf5cc205a5923395e4b9ed8931387dc52eeb878b3acc9775de732b221116')
 
 build() {
     cd "${srcdir}"
-	rm gcmcore-win-x86-${pkgver}.${_buildver}.zip
+    rm gcmcore-win-x86-${pkgver}.${_buildver}.zip
     rm validatesign.timestamp
 }
 
 package() {
     cd "${srcdir}"
     install -Dm644 NOTICE "${pkgdir}/usr/share/licenses/${_realname}/LICENSE"
-	rm NOTICE
-	mkdir -p ${pkgdir}/usr/lib/git-core
-	cp * "${pkgdir}/usr/lib/git-core"
+    rm NOTICE
+    mkdir -p ${pkgdir}/usr/lib/git-core
+    cp * "${pkgdir}/usr/lib/git-core"
 }
