@@ -1,4 +1,4 @@
 pkg/
 src/
-gcmcore-win-x86-*.zip
-git-credential-manager-core-bin-*-any.pkg.tar.zst
+gcm-win-x86-*.zip
+git-credential-manager-bin-*-any.pkg.tar.zst
