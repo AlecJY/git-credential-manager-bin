@@ -1,5 +1,9 @@
 # Git Credential Manager binary package for MSYS2
 
+[![build result](https://build.opensuse.org/projects/home:AlecJY:msys2/packages/git-credential-manager-bin/badge.svg?type=default)](https://build.opensuse.org/package/show/home:AlecJY:msys2/git-credential-manager-bin)
+
+---
+
 ## Installation
 ### Download manually
 Download the latest version from [release page](https://github.com/AlecJY/git-credential-manager-bin/releases)
