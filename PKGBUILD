@@ -1,6 +1,6 @@
 _realname='git-credential-manager'
 pkgname="${_realname}-bin"
-pkgver=2.3.1
+pkgver=2.4.1
 pkgrel=1
 pkgdesc="Secure, cross-platform Git credential storage with authentication to GitHub, Azure Repos, and other popular Git hosting services."
 arch=('any')
@@ -11,7 +11,7 @@ depends=('git')
 replaces=('git-credential-manager-core-bin')
 conflicts=('git-credential-manager-core-bin')
 install="${pkgname}.install"
-sha256sums=('32d343a59eb21083c67397a248272c1bc9323e5f4cc5c7f86d5a5f58ed995136')
+sha256sums=('771d67d11eeb6104062a7647ff99f51a27bdbbeea3489077c0696cfea8a0a0d0')
 
 build() {
     cd "${srcdir}"
